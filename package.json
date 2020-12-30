@@ -1,0 +1,32 @@
+{
+  "name": "firebase-firestore-rule-testing-demo",
+  "version": "1.0.0",
+  "description": "Firebase Firestore rules testing demo for https://dpurdy.me/blog/firebase-cloud-firestore-security-rules/",
+  "main": "index.js",
+  "scripts": {
+    "execute-tests:rules": "jest 'firestore/tests' --config 'firestore/jest.config.js' --detectOpenHandles",
+    "test": "firebase emulators:exec --only firestore 'npm run execute-tests:rules'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanPurdy/firebase-firestore-rule-testing-demo.git"
+  },
+  "keywords": [
+    "Firebase",
+    "Firestore",
+    "rules",
+    "jest",
+    "testing"
+  ],
+  "author": "Dan Purdy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DanPurdy/firebase-firestore-rule-testing-demo/issues"
+  },
+  "homepage": "https://dpurdy.me/blog/firebase-cloud-firestore-security-rules/",
+  "devDependencies": {
+    "@firebase/rules-unit-testing": "^1.1.6",
+    "jest-environment-node": "^26.6.2",
+    "prettier": "^2.2.1"
+  }
+}
