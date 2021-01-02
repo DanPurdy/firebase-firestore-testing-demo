@@ -20,7 +20,7 @@ service cloud.firestore {
 
       match /staff/{staffMemberId} {
         allow read, create: if isStoreStaff(storeId);
-        allow update: if userOwnsData(staffMemberId);
+        allow update: if userOwnsData(staffMemberId) && isStoreStaff(storeId);
         allow delete: if false;
       }
     }

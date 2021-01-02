@@ -69,7 +69,7 @@ describe('Staff update rules', () => {
   });
 
   // Should never happen but lets check it succeeds to match our rules
-  test('succeed when a user is not a staff member and they try to update their own staff record', async () => {
+  test('fail when a user is not a staff member and they try to update their own staff record', async () => {
     const db = await setup(
       {
         uid: 'SM00',
@@ -82,6 +82,6 @@ describe('Staff update rules', () => {
     );
     const ref = db.collection('stores').doc('ST00').collection('staff');
 
-    expect(await assertSucceeds(ref.doc('SM00').update({ name: 'newTest' })));
+    expect(await assertFails(ref.doc('SM00').update({ name: 'newTest' })));
   });
 });
