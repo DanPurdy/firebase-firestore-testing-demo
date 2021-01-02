@@ -1,38 +1,23 @@
 version: 2.1
 
-orbs:
-  node: circleci/node@3.0.0
 jobs:
-  prepare-dependencies:
+  build-and-test:
     working_directory: ~/firebase-firestore-rule-testing-demo
     docker:
-      - image: node:current
+      - image: cimg/node:15.3.0-browsers
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "package-lock.json" }}
+          key: dependency-cache-{{.Environment.CACHE_VERSION}}-{{ checksum "package-lock.json" }}
       - run:
           name: Install Dependencies
           command: |
-            npm i -g firebase-tools
             npm ci
+            sudo npm i -g firebase-tools
       - save_cache:
-          key: dependency-cache-{{ checksum "package-lock.json" }}
+          key: dependency-cache-{{.Environment.CACHE_VERSION}}-{{ checksum "package-lock.json" }}
           paths:
             - ./node_modules
-      - store_artifacts:
-          path: package-lock.json
-      - persist_to_workspace:
-          root: .
-          paths:
-            - .
-  unit-tests:
-    working_directory: ~/firebase-firestore-rule-testing-demo
-    docker:
-      - image: node:current
-    steps:
-      - attach_workspace:
-          at: .
       - run:
           name: Unit tests
           command: npm run test
@@ -41,7 +26,4 @@ jobs:
 workflows:
   tests:
     jobs:
-      - prepare-dependencies
-      - unit-tests:
-          requires:
-            - prepare-dependencies
+      - build-and-test

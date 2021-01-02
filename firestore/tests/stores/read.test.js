@@ -49,6 +49,10 @@ describe('Stores read rules', () => {
   });
 
   describe('get', () => {
+    afterAll(async () => {
+      await teardown();
+    });
+
     test('succeed when a non authenticated user tries to load a store', async () => {
       const db = await setup(null, {
         'stores/ST01': {

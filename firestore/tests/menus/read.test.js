@@ -36,6 +36,10 @@ describe('Menu read rules', () => {
   });
 
   describe('get', () => {
+    afterAll(async () => {
+      await teardown();
+    });
+
     test('succeed when a non authenticated user tries to get a menu', async () => {
       const db = await setup(null, {
         'stores/ST01/menus/MU00': {
