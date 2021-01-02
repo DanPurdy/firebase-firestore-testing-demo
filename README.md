@@ -13,7 +13,7 @@ The companion for the Firebase Cloud Firestore security rules article at [dpurdy
 If you don't have the firebase CLI setup you'll need to install it see the [Firebase CLI docs](https://firebase.google.com/docs/cli) or just install globally with npm using
 
 ```
-https://firebase.google.com/docs/cli
+npm install -g firebase-tools
 ```
 
 then install the node modules
