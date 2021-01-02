@@ -49,7 +49,7 @@ describe('Stores read rules', () => {
   });
 
   describe('get', () => {
-    test('succeed when a non authenticated user tries to load a shop', async () => {
+    test('succeed when a non authenticated user tries to load a store', async () => {
       const db = await setup(null, {
         'stores/ST01': {
           name: 'test',
@@ -60,7 +60,7 @@ describe('Stores read rules', () => {
       expect(await assertSucceeds(ref.doc('ST01').get()));
     });
 
-    test('succeed when a authenticated user tries to load a shop', async () => {
+    test('succeed when a authenticated user tries to load a store', async () => {
       const db = await setup(
         {
           uid: 'user',
