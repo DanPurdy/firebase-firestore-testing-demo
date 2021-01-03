@@ -8,7 +8,7 @@ describe('Menu delete rules', () => {
 
   test('fail when a non authenticated user tries to delete a menu record', async () => {
     const db = await setup(null, {
-      'stores/SH00/menus/MU00': {
+      'stores/ST00/menus/MU00': {
         id: 'test',
       },
     });
@@ -24,7 +24,7 @@ describe('Menu delete rules', () => {
     const db = await setup(
       { uid: 'test' },
       {
-        'stores/SH00/menus/MU00': {
+        'stores/ST00/menus/MU00': {
           id: 'test',
         },
       },
