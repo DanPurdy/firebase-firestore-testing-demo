@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/DanPurdy/firebase-firestore-rule-testing-demo.svg?style=shield)](https://circleci.com/gh/DanPurdy/firebase-firestore-rule-testing-demo)
+
 # firebase-firestore-testing-demo
 
 A Firebase Firestore demo repo for testing Firestore rules
@@ -6,7 +8,7 @@ The companion for the Firebase Cloud Firestore security rules article at [dpurdy
 
 [Part 1](https://dpurdy.me/blog/firebase-cloud-firestore-security-rules/) - Writing the rules
 
-~~Part 2 - Unit testing the rules~~ (coming soon)
+[Part 2](https://dpurdy.me/blog/firebase-cloud-firestore-security-rules-part-two-unit-testing/) - Unit testing the rules
 
 ## Setup and run
 

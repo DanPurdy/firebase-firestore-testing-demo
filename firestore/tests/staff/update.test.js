@@ -34,7 +34,7 @@ describe('Staff update rules', () => {
     expect(await assertFails(ref.doc('SM00').update({ name: 'newTest' })));
   });
 
-  test('fail when a store admin from a different store tries to update another staff member from the same store', async () => {
+  test('fail when a store admin from a different store tries to update another staff member from another store', async () => {
     const db = await setup(
       {
         uid: 'SM01',

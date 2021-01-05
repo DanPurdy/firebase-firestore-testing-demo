@@ -7,7 +7,7 @@ describe('Default firestore rules', () => {
 
   beforeAll(async () => {
     db = await setup();
-    ref = db.collection('non-existsant-collection');
+    ref = db.collection('non-existsent-collection');
   });
 
   afterAll(async () => {
