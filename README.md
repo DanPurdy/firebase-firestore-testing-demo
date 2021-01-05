@@ -6,9 +6,9 @@ A Firebase Firestore demo repo for testing Firestore rules
 
 The companion for the Firebase Cloud Firestore security rules article at [dpurdy.me](https://dpurdy.me/blog)
 
-[Part 1](https://dpurdy.me/blog/firebase-cloud-firestore-security-rules/) - Writing the rules
+Part 1 - [Firebase Cloud Firestore security rules - Part one - Writing the rules](https://dpurdy.me/blog/firebase-cloud-firestore-security-rules/)
 
-[Part 2](https://dpurdy.me/blog/firebase-cloud-firestore-security-rules-part-two-unit-testing/) - Unit testing the rules
+Part 2 - [Firebase Cloud Firestore security rules - Part two - unit testing](https://dpurdy.me/blog/firebase-cloud-firestore-security-rules-part-two-unit-testing/)
 
 ## Setup and run
 
