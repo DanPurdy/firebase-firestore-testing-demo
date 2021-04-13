@@ -26,6 +26,9 @@
   "homepage": "https://dpurdy.me/blog/firebase-cloud-firestore-security-rules/",
   "devDependencies": {
     "@firebase/rules-unit-testing": "^1.2.8",
+    "@firebase/util": "^1.0.0",
+    "@google-cloud/firestore": "^4.9.9",
+    "firebase-admin": "^9.6.0",
     "husky": "^4.3.8",
     "jest": "^26.6.3",
     "jest-environment-node": "^26.6.2",
